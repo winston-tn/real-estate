@@ -148,7 +148,7 @@ export const getFilterValues = (filterValues) => {
     furnishingStatus,
     categoryExternalID,  
     locationExternalIDs,
-  } = filterValues;
+  } = filterValues;           // assign values from filterValues to these variables - destructuring; undefined if not found
 
   const values = [
     {

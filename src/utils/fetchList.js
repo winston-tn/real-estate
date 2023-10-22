@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const fetchAPI = async ({
+export const fetchList = async ({
   purpose,
   locationExternalIDs = "5002,6020",
   hitsPerPage,
@@ -36,16 +36,15 @@ export const fetchAPI = async ({
       categoryExternalID
     },
     headers: {
-      'X-RapidAPI-Key': '70ee507d19msh5c16a5be76fe3f5p133be0jsn6cf59756da56',
+      'X-RapidAPI-Key': '92d8461160mshe3c4ed750fb8e96p17da10jsn6cbd44ae1925',
       'X-RapidAPI-Host': 'bayut.p.rapidapi.com'
     }
   };
 
   try {
-    // console.log(options);
     const response = await axios.request(options);
     return response.data;
   } catch (error) {
-    console.error(`Error fetching..`, error);
+    console.error(`Error fetching list..`, error);
   }
 };

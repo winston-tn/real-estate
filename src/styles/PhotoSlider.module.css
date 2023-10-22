@@ -1,0 +1,9 @@
+.nextArrow {
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+
+.prevArrow {
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
