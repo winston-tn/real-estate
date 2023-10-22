@@ -5,34 +5,39 @@ import { FaBed, FaBath } from 'react-icons/fa';
 import { BsGridFill } from 'react-icons/bs';
 import { GoVerified } from 'react-icons/go';
 import millify from 'millify';
-import DefaultImage from '../assets/images/house.jpg';
-import styles from '../styles/global.module.css';
+import DefaultImage from '../assets/images/houseplaceholder.png';
 
-const Property = ({property : {coverPhoto, price, rentFrequency, rooms, title, baths, area, agency, isVerified, externalID}}) => {
-  return (  
-    <Link href={`/property/${externalID}`} passHref>
-      <Flex wrap="wrap" w="400px"  cursor="pointer">     
-        <Image className={styles["fixed-size-image"]} src={coverPhoto ? coverPhoto.url : DefaultImage} width={400} height={260} alt="house" />       
-        <Box w="full">
-          <Flex pt={2} align="center">          
-            <Box pr={3} color="green.400">
-              {isVerified && <GoVerified />}
-            </Box>
-            <Text fontSize="lg" fontWeight="bold">AED {millify(price)}{rentFrequency && `/${rentFrequency}`}</Text>
-            <Spacer />
-            <Avatar size="sm" src={agency?.logo?.url} />          
-          </Flex>
-          <Flex align="center" justify="space-between" w="250px" color="blue.400">
-            {rooms} <FaBed /> | {baths} <FaBath /> | {millify(area)} sqft <BsGridFill />
-          </Flex>
-          <Text fontSize="lg">
-            {title.length > 40 ? `${title.substring(0, 40)}...` : title}
-          </Text>
-        </Box>
-      </Flex>
-    </Link>
-  )
-}
+
+const Property = ({ property: { coverPhoto, price, rentFrequency, rooms, title, baths, area, agency, isVerified, externalID } }) => (
+  <Link href={`/property/${externalID}`} passHref>
+    <Flex direction="column" w="sm" cursor="pointer">
+      <Image
+        src={coverPhoto ? coverPhoto.url : DefaultImage}
+        width={400}
+        height={260}
+        alt="house"
+        style={{ width: "400px", height: "260px", objectFit: "cover" }}
+      />
+      <Box w="full" mt={2}>
+        <Flex align="center">
+          <Box mr={3} color="green.400">
+            {isVerified && <GoVerified />}
+          </Box>
+          <Text fontSize="lg" fontWeight="bold">AED {millify(price)}{rentFrequency && `/${rentFrequency}`}</Text>
+          <Spacer />
+          <Avatar size="sm" src={agency?.logo?.url} />
+        </Flex>
+        <Flex align="center" justify="space-between" w="2xs" color="blue.400">
+          {rooms} <FaBed /> | {baths} <FaBath /> | {millify(area)} sqft <BsGridFill />
+        </Flex>
+        <Text fontSize="lg">
+          {title.length > 40 ? `${title.substring(0, 40)}...` : title}
+        </Text>
+      </Box>
+    </Flex>
+  </Link>
+)
+
 
 export default Property;
 

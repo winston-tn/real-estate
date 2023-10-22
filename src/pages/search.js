@@ -6,44 +6,54 @@ import { BsFilter } from 'react-icons/bs';
 import SearchFilters from '../components/SearchFilters';
 import Property from '../components/Property';
 import NoResultImage from '../assets/images/noresult.svg';
-import { fetchAPI } from '../utils/fetchAPI';
-import { getFilterValues } from '@/utils/filterData';
+import { fetchList } from '../utils/fetchList';
 
-export default function Search({ properties })  {
-  const [searchFilters, setSearchFilters] = useState(false);
-  const {query} = useRouter();
- 
+const formatPurpose = (purpose) => {
+  switch (purpose) {
+    case "for-sale":
+      return "For Sale";
+    case "for-rent":
+      return "For Rent";
+    default:
+      return "";
+  }
+}
+
+export default function Search({ properties }) {
+  const [searchFilterDisplay, setSearchFilterDisplay] = useState(true);
+  const { query } = useRouter();
 
   return (
     <Box>
-      <Flex cursor="pointer" 
-            bgColor="gray.100" 
-            borderBottomWidth="1px" 
-            borderBottomColor="gray.200" 
-            p={2} 
-            fontWeight="black"
-            fontSize="lg"
-            justify="center"
-            align="center"
-            onClick={() => setSearchFilters(!searchFilters)}
+      <Flex
+        cursor="pointer"
+        bgColor="gray.100"
+        borderBottomWidth="1px"
+        borderBottomColor="gray.200"
+        p={2}
+        fontWeight="black"
+        fontSize="lg"
+        justify="center"
+        align="center"
+        onClick={() => setSearchFilterDisplay(!searchFilterDisplay)}
       >
         <Text>Search Property By Filters</Text>
-        <Icon as={BsFilter} pl={2} w="max"></Icon>
+        <Icon as={BsFilter} pl={2} boxSize={7} />
       </Flex>
-
-      {searchFilters && <SearchFilters />}
-
+      <Box display={searchFilterDisplay ? "block" : "none" }>
+        <SearchFilters />
+      </Box>
       <Text fontSize="2xl" p={4} fontWeight="bold">
-        Properties {query.purpose}
+        Properties {formatPurpose(query.purpose)}
       </Text>
 
       <Flex wrap="wrap" justify="center" gap={8}>
-        {properties.map((property) => <Property property={property} key={property.id} />)}
+        {properties.map((property) => <Property key={property.id} property={property} />)}
       </Flex>
 
       {properties.length === 0 && (
         <Flex direction="column" justify="center" align="center" mt={5} mb={5}>
-          <Image src={NoResultImage} alt="No Result"></Image>
+          <Image src={NoResultImage} alt="No Result" />
           <Text fontSize="2xl" mt={3}>No Results Found</Text>
         </Flex>
       )}
@@ -52,7 +62,7 @@ export default function Search({ properties })  {
 }
 
 export async function getServerSideProps({ query }) {
-  try {  
+  try {
     const {
       purpose = "for-rent",
       rentFrequency = "yearly",
@@ -63,8 +73,8 @@ export async function getServerSideProps({ query }) {
       roomsMin = "0",
       bathsMin = "0",
       furnishingStatus = "furnished",
-      categoryExternalID = "4",   
-      locationExternalIDs = "5002",     
+      categoryExternalID = "4",
+      locationExternalIDs = "5002",
       hitsPerPage = "15"
     } = query;
 
@@ -79,17 +89,17 @@ export async function getServerSideProps({ query }) {
       bathsMin,
       furnishingStatus,
       categoryExternalID,
-      locationExternalIDs,    
+      locationExternalIDs,
       hitsPerPage
     };
     // console.log(queryParams);
-    const data = await fetchAPI(queryParams);
+    const data = await fetchList(queryParams);
     return {
       props: {
         properties: data?.hits,
       }
     }
-  } catch (error) { 
+  } catch (error) {
     console.error("Error fetching data:", error);
     return {
       props: {

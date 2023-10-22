@@ -3,12 +3,12 @@ import { Box } from '@chakra-ui/react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
-const Layout = ({children}) => (
+const Layout = ({ children }) => (
   <>
-    <Head>   
+    <Head>
       <title>Restateal</title>
     </Head>
-    <Box maxWidth="1280px" m="auto">
+    <Box maxWidth="container.xl" m="auto">
       <header>
         <Navbar />
       </header>
