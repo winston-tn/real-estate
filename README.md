@@ -1,40 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Real Estate App README
+Introduction
+Welcome to Restateal - a modern Real Estate web application built with Next.js, Chakra UI, and React. This app is designed to help users browse properties for rent and for sale. It offers a variety of filters to simplify the search process and is responsive and user-friendly.
 
-## Getting Started
+Features
+Property Listings: Browse a wide range of properties available for rent and sale, including houses, apartments, condos, and more.
 
-First, run the development server:
+Search Filters: Use a variety of filters to narrow down your property search, including location, property type, price range, and more.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+User-Friendly Interface: The app provides an intuitive and user-friendly interface, making it easy for users to find the information they need.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Responsive Design: The app is responsive and works seamlessly on a range of devices, from desktops to mobile phones.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Technologies Used
+Next.js: Next.js is a popular React framework that helps with server-side rendering, routing, and overall application structure.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Chakra UI: Chakra UI is a simple and modular component library for building user interfaces in React. It ensures a consistent and visually appealing design.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+React: React is a JavaScript library for building user interfaces. It forms the core of this application.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Others: Various other technologies and libraries are used to enhance the development process, such as state management, data storage, and routing libraries.
 
-## Learn More
+Usage
+Browse Properties: Start by visiting the homepage and explore the available properties.
 
-To learn more about Next.js, take a look at the following resources:
+Refine Your Search: Use the filter options to narrow down your search based on location, property type, price range, and other criteria.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+View Property Details: Click on a property listing to view more details, including images, descriptions, and contact information.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Contact the Seller: If you are interested in a property, use the provided contact information to get in touch with the seller or real estate agent.
 
-## Deploy on Vercel
+Enjoy a User-Friendly Experience: The app is designed with a user-friendly interface to ensure a seamless and enjoyable experience.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+License
+This Real Estate App is open-source software licensed under the MIT License.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Contact
+For questions or support, please contact the project maintainers via winston.tn@outlook.com or GitHub Issues.
+
+Thank you for using the Real Estate App! We hope you find your dream property with ease. Happy house hunting!
