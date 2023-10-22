@@ -1,9 +1,9 @@
-#Real Estate App README
+# Real Estate App README
 
 ##Introduction
 Welcome to Restateal - a modern Real Estate web application built with Next.js, Chakra UI, and React. This app is designed to help users browse properties for rent and for sale. It offers a variety of filters to simplify the search process and is responsive and user-friendly.
 
-##Features
+## Features
 Property Listings: Browse a wide range of properties available for rent and sale, including houses, apartments, condos, and more.
 
 Search Filters: Use a variety of filters to narrow down your property search, including location, property type, price range, and more.
@@ -12,7 +12,7 @@ User-Friendly Interface: The app provides an intuitive and user-friendly interfa
 
 Responsive Design: The app is responsive and works seamlessly on a range of devices, from desktops to mobile phones.
 
-##Technologies
+## Technologies
 Next.js: Next.js is a popular React framework that helps with server-side rendering, routing, and overall application structure.
 
 Chakra UI: Chakra UI is a simple and modular component library for building user interfaces in React. It ensures a consistent and visually appealing design.
@@ -21,7 +21,7 @@ React: React is a JavaScript library for building user interfaces. It forms the 
 
 Others: Various other technologies and libraries are used to enhance the development process, such as state management, data storage, and routing libraries.
 
-##Usage
+## Usage
 Browse Properties: Start by visiting the homepage and explore the available properties.
 
 Refine Your Search: Use the filter options to narrow down your search based on location, property type, price range, and other criteria.
@@ -32,10 +32,10 @@ Contact the Seller: If you are interested in a property, use the provided contac
 
 Enjoy a User-Friendly Experience: The app is designed with a user-friendly interface to ensure a seamless and enjoyable experience.
 
-##License
+## License
 This Real Estate App is open-source software licensed under the MIT License.
 
-##Contact
+## Contact
 For questions or support, please contact the project maintainers via winston.tn@outlook.com or GitHub Issues.
 
 Thank you for using the Real Estate App! We hope you find your dream property with ease. Happy house hunting!
