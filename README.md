@@ -1,4 +1,5 @@
 Real Estate App README
+
 Introduction
 Welcome to Restateal - a modern Real Estate web application built with Next.js, Chakra UI, and React. This app is designed to help users browse properties for rent and for sale. It offers a variety of filters to simplify the search process and is responsive and user-friendly.
 
