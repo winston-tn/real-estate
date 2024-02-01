@@ -1,7 +1,7 @@
 # Real Estate App README
 
 ## Introduction
-Welcome to Restateal - a contemporary Real Estate web application crafted using Next.js, React, and Chakra UI. This platform is tailored to assist users in exploring available properties for both rent and sale. With its diverse range of filters, it streamlines the search experience, all while maintaining a responsive and user-centric design.
+Welcome to Realtor - a contemporary Real Estate web application crafted using Next.js, React, and Chakra UI. This platform is tailored to assist users in exploring available properties for both rent and sale. With its diverse range of filters, it streamlines the search experience, all while maintaining a responsive and user-centric design.
 
 ## Features
 Property Listings: Browse a wide range of properties available for rent and sale, including houses, apartments, condos, and more.
