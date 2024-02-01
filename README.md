@@ -1,4 +1,5 @@
 # Real Estate Platform
+![s2](https://github.com/winston-tn/real-estate/assets/143966236/2bd373ce-8810-4510-8195-43f7daeeeb2d)
 
 ## Introduction
 Welcome to Realtor - a contemporary Real Estate web application crafted using Next.js, React, and Chakra UI. This platform is tailored to assist users in exploring available properties for both rent and sale. With its diverse range of filters, it streamlines the search experience, all while maintaining a responsive and user-centric design.
